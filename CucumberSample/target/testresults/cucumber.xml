@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="11.734276">
-<testcase classname="As a User I should be able to search for restaurants" name="List of search suggestions" time="11.734276">
-<system-out><![CDATA[Given I am on the Homepage..................................................passed
-When I type search term 'Ye'................................................passed
-Then I should see a list of search suggestions related to 'Ye'..............passed
-]]></system-out>
-</testcase>
-</testsuite>
