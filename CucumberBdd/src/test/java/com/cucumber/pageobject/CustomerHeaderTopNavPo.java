@@ -18,10 +18,25 @@ public class CustomerHeaderTopNavPo {
 		 customerHeaderTopNavUi = new CustomerHeaderTopNavUi(driver);
 	}
 
-	public void navigateToLogin() {
+	public void navigateToPage(String page) {
 		log.traceEntry();
-		customerHeaderTopNavUi.myAccountDropDown.click();
-		customerHeaderTopNavUi.loginLink.click();
+		
+		switch (page) {
+			case "Home Page":
+				customerHeaderTopNavUi.homeLink.click();
+				break;
+			case "Login Page":
+				customerHeaderTopNavUi.myAccountDropDown.click();
+				customerHeaderTopNavUi.loginLink.click();
+				break;
+			case "Logout":
+				customerHeaderTopNavUi.myAccountDropDown.click();
+				customerHeaderTopNavUi.logoutLink.click();
+				break;
+			default:
+				Assert.fail("Page link not available in top nav");
+				
+		}
 		log.traceExit();
 	}
 }

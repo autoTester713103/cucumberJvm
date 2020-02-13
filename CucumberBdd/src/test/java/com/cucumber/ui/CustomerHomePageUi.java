@@ -16,7 +16,10 @@ public class CustomerHomePageUi {
 	@FindBy(xpath="//input[@name='dest'][@type='search']")
 	public WebElement destinationSearchBox;
 	
-	@FindBy(xpath="//ul[@class='select2-results']/li")
+	@FindBy(xpath="//form[@name='HOTELS']//label[text()='Destination']/following-sibling::div[not(@class='clear')]/div")
+	public WebElement destinationDiv;
+	
+	@FindBy(xpath="//ul[@class='select2-results']//ul[1]")
 	public WebElement topDestinationOption;
 	
 	@FindBy(xpath="//input[@id='checkin']")
@@ -30,4 +33,7 @@ public class CustomerHomePageUi {
 	
 	@FindBy(xpath="//iframe[@id='chat-widget']")
 	public WebElement chatWidget;
+	
+	@FindBy(xpath="//div[@dir='ltr']//button")
+	public WebElement chatWidgetButton;
 }

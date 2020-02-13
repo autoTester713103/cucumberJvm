@@ -18,5 +18,11 @@ public class CustomerHeaderTopNavUi {
 	
 	@FindBy(xpath="//a[text()='Login']")
 	public WebElement loginLink;
+	
+	@FindBy(xpath="//div[@class='header-nav']//a[text()='Home']")
+	public WebElement homeLink;
+	
+	@FindBy(xpath="//*[text()='Logout']")
+	public WebElement logoutLink;
 
 }
