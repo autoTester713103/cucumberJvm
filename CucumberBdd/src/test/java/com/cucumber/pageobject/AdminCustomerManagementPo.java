@@ -47,6 +47,7 @@ public class AdminCustomerManagementPo {
 		log.traceEntry();
 		List<Map<String, String>> map = dt.asMaps(String.class, String.class);
 		Map<String, String> getMap = map.get(0);
+		Assert.assertTrue("Did not find Customer Table", adminCustomerManagementUi.customerTableRows.size() > 0);
 		for (WebElement row : adminCustomerManagementUi.customerTableRows) {
 			log.debug(row.getText());
 			if(row.getText().contains(getMap.get("First Name")) && row.getText().contains(getMap.get("Last Name")) && row.getText().contains(getMap.get("Email"))) {

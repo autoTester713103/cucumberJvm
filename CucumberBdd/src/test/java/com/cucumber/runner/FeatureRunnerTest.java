@@ -13,7 +13,8 @@ import cucumber.api.junit.Cucumber;
       glue = {"com/cucumber/stepdefinition","com/cucumber/helpers"}, //step definition package
       plugin = {"html:target/testresults/html", //test results as html
               "json:target/testresults/cucumber.json", //test results as json
-              "junit:target/testresults/cucumber.xml"}) //test results as junit xml
+              "junit:target/testresults/cucumber.xml", //test results as junit xml
+              "pretty"}) 
 public class FeatureRunnerTest {
 	// leave this blank
 }

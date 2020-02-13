@@ -16,6 +16,6 @@ Feature: As a User I should be able to book a hotel
     | location | checkin | checkout |
     | Grand Bahama |1-2-2020 | 28-2-2020 |
     	And I see results
-    Then I book a room
-    	And I should see the payment page
+    	And I book a room
+    Then I should see the payment page
     	And I navigate to "Logout"
