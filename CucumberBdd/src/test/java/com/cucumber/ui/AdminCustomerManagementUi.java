@@ -7,13 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 public class AdminCustomerManagementUi {
 	WebDriver driver;
 
 	public AdminCustomerManagementUi(WebDriver driver) {
 		this.driver = driver;
-        PageFactory.initElements(driver, this);
+		AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver, 100);
+        PageFactory.initElements(factory, this);
 	}
 	
 	@FindBy(xpath="//button[@type='submit'][contains(@class,'btn')]")

@@ -26,7 +26,7 @@ public class Hooks {
 	 * between tests
 	 */
 	public void before(Scenario scenario) throws MalformedURLException {
-		logger.info("Called openBrowser for scenario [{}]", scenario.getId());
+		logger.info("Starting Scenario: [{}]", scenario.getName());
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

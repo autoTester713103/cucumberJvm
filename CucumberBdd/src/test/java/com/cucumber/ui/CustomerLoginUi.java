@@ -4,13 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 public class CustomerLoginUi {
 	WebDriver driver;
 	
 	public CustomerLoginUi(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver, 100);
+        PageFactory.initElements(factory, this);
 	}
 	
 	@FindBy(xpath="//input[@type='email'][@name='username']")
